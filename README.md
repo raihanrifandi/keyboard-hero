@@ -1,7 +1,5 @@
 # ⌨️ Keyboard Hero
 
-> Music sets the pace. You type the notes.
-
 Keyboard Hero is a web-based rhythm game built around typing.
 
 The idea is simple: instead of pressing buttons or following guitar notes, you type words that move toward a hit line. Your timing affects the score, combo, and final grade.
