@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #f4f1ea;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #eae7df;
+  --color-border: #d6d1c7;
+  --color-text: #171717;
+  --color-text-secondary: #6b6861;
+  --color-accent: #ff5a36;
+
+  --color-perfect: #2e9b61;
+  --color-great: #3478c8;
+  --color-good: #c58a24;
+  --color-miss: #d64545;
+
+  --game-bg: #171717;
+  --game-surface: #202020;
+  --game-border: #343434;
+  --game-text: #f5f5f5;
+  --game-text-secondary: #909090;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow-x: hidden;
+}
+
+/* Tactile button pressed styling */
+.btn-tactile {
+  transition: transform 100ms ease-out, background-color 150ms ease-out, border-color 150ms ease-out;
+}
+
+.btn-tactile:active {
+  transform: translateY(1px);
+}
+
+/* Monospace font utility for numbers and scores */
+.font-mono-stat {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Shake animation for typing errors */
+@keyframes shake-err {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake-err 180ms ease-in-out;
+}
+
+/* Beat pulse subtle response */
+@keyframes beat-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.animate-beat {
+  animation: beat-pulse 140ms ease-out;
+}
+
